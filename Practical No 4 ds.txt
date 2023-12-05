@@ -1,0 +1,105 @@
+Practical No 4: Write a program to implement a queue using a linked list.
+#include <stdio.h>
+#include<stdlib.h>
+struct node{
+ int data;
+ struct node *next;
+};
+struct node *front=0;
+struct node *rear=0;
+void enqueue()
+{
+struct node *newnode;
+newnode=(struct node*)malloc(sizeof(struct node));
+ int data;
+ printf("enter element into queue\n");
+ scanf("%d",&data);
+ newnode ->data=data;
+ newnode ->next = 0;
+ if(front==0&&rear==0)
+ {
+ front=rear=newnode;
+ }
+ else
+ {
+ rear->next=newnode;
+ rear=newnode;
+ }
+}
+void display()
+{
+ struct node*temp;
+ if(front==0&&rear==0
+ { printf("the queue is empty\n");
+ }
+ else
+ {
+ temp=front;
+ while(temp!=0)
+ { printf("value in queue is:%d\n",temp->data);
+ temp=temp->next;
+ }
+ }
+}
+void dequeue()
+{
+ struct node*temp;
+ temp=front;
+ if(front==0&&rear==0)
+ {
+ printf("the queue is empty\n");
+ }
+ else
+ {
+ printf("\ndeleted value is :%d \n",front->data);
+ front=front->next;
+ free(temp);
+ }
+}
+void peek()
+{
+ if(front==0&&rear==0)
+ {
+ printf("queue is empty");
+ }
+ else
+ {
+ printf("The front value is :%d\n",front->data);
+ }
+
+}
+int main() {
+ // Write C code here
+ while(1)
+ { int choice;
+ printf("1.enqueue\n2.dequeue\n3.display\n4.peek\n");
+ printf("enter your choice\n");
+ scanf("%d",&choice);
+ switch(choice)
+ {
+ case 1:
+ { enqueue();
+ break;
+ }
+ case 2:
+ { dequeue();
+ break;
+ }
+ case 3:
+ { display();
+ break;
+ }
+ case 4:
+ { peek();
+ break;
+ }
+ default:
+ {
+ printf("invalid choice");
+ }
+ }
+
+ }
+
+ return 0;
+}

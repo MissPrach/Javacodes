@@ -1,0 +1,72 @@
+Practical No 2: Write a program to implement a queue using arrays
+#include <stdio.h>
+#define MAX 100
+void inqueue();
+void dequeue();
+void display();
+int n,choice,rear=-1,front=-1;
+int queue[MAX];
+int main() {
+ // Write C code here
+ while(1)
+ {
+ printf("\n1.insert value\n2.delete value\n3.show\n");
+ printf("\nenter your choice\n");
+ scanf("%d",&choice);
+ switch(choice)
+ {
+ case 1:
+ {
+ inqueue();
+ break;
+ }
+ case 2:
+ {
+ dequeue();
+ break;
+ }
+ case 3:
+ {
+ display();
+ break;
+ }
+ default:
+ {
+ printf("Invalid choice");
+ }
+ }
+ }
+}
+ void inqueue() {
+ if (rear == MAX - 1) {
+ printf("The queue is full\n");
+ } else {
+ int value;
+ printf("enter the value into queue: ");
+ scanf("%d", &value);
+ if (front == -1) {
+ // If the queue is empty, set front to 0
+ front = 0;
+ }
+ rear = rear + 1;
+ queue[rear] = value;
+ }
+}
+ void dequeue() {
+ if (front == -1 || rear ==-1) {
+ printf("Queue is empty\n");
+ } else {
+ printf("Deleted value is %d\n", queue[front]);
+ front = front + 1;
+ }
+}
+ void display() {
+ if (front == -1 || rear==-1) {
+ printf("Queue is empty\n");
+ } else {
+ printf("Queue elements are: ");
+ for (int i = front; i <= rear; i++) { printf("%d ", queue[i]);
+ }
+ printf("\n");
+ }
+}
