@@ -1,0 +1,123 @@
+Aim: Programs on Inheritance and Polymorphism.
+Objectives: To understand and apply the concepts of polymorphism and inheritance according to
+problem specification given.
+Theory:
+Inheritance:
+Inheritance is an important pillar of OOP(Object-Oriented Programming). It is the
+mechanism in java by which one class is allowed to inherit the features(fields and methods) of
+another class. In Java, inheritance means creating new classes based on existing ones. A class
+that inherits from another class can reuse the methods and fields of that class. In addition, you
+can add new fields and methods to your current class as well.
+
+Inheritance represents the IS-A relationship which is also known as a parent-
+child relationship.
+
+Objectives of Inheritance in Java:
+ Code Reusability: The code written in the Superclass is common to all subclasses. Child
+classes can directly use the parent class’s code.
+ Method Overriding: Method Overriding is achievable only through Inheritance. It is one of
+the ways by which java achieves Run Time Polymorphism.
+ Abstraction: The concept of abstract where we do not have to provide all details is
+achieved through inheritance. Abstraction only shows the functionality to the user.
+
+The syntax of Java Inheritance:
+
+class Subclass-name extends Superclass-name
+{
+//methods and fields
+}
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 33
+Types of inheritance in java
+On the basis of class, there can be three types of inheritance in java: single, multilevel
+and hierarchical.
+
+
+Polymorphism:
+Polymorphism is considered one of the important features of Object-Oriented
+Programming. Polymorphism allows us to perform a single action in different ways. In other
+words, polymorphism allows you to define one interface and have multiple implementations.
+The word “poly” means many and “morphs” means forms, So it means many forms.
+
+Types of polymorphism
+In Java polymorphism is mainly divided into two types:
+ Compile-time Polymorphism
+ Runtime Polymorphism
+
+1) Compile-time Polymorphism(Method Overloading): When there are multiple
+functions with the same name but different parameters then these functions are said to
+be overloaded. Functions can be overloaded by change in the number of arguments
+or/and a change in the type of arguments.
+
+
+
+2) Run Time Polymorphism: It is also known as Dynamic Method Dispatch. It is a
+process in which a function call to the overridden method is resolved at Runtime. This
+type of polymorphism is achieved by Method Overriding. Method overriding, on the
+other hand, occurs when a derived class has a definition for one of the member
+functions of the base class. That base function is said to be overridden.
+
+Source Code:
+
+i) Program on Inheritance
+
+class Animal{
+void eat(){
+System.out.println("eating...");}
+}
+class Dog extends Animal{
+void bark(){
+System.out.println("barking...");}
+}
+class BabyDog extends Dog{
+void weep(){
+System.out.println("weeping...");}
+}
+class TestInheritance2{
+public static void main(String args[]){
+BabyDog d=new BabyDog();
+d.weep();
+d.bark();
+
+
+
+d.eat();
+}}
+Output:
+weeping...
+barking...
+eating...
+ii) Program on Polymorphism
+
+class Shape{
+void draw(){System.out.println("drawing...");}
+}
+class Rectangle extends Shape{
+void draw(){System.out.println("drawing rectangle...");}
+}
+class Circle extends Shape{
+void draw(){System.out.println("drawing circle...");}
+}
+class Triangle extends Shape{
+void draw(){System.out.println("drawing triangle...");}
+}
+class TestPolymorphism2{
+public static void main(String args[]){
+Shape s;
+s=new Rectangle();
+s.draw();
+s=new Circle();
+s.draw();
+s=new Triangle();
+s.draw();
+}
+}
+
+
+
+Output:
+drawing rectangle...
+drawing circle...
+drawing triangle...

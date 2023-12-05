@@ -1,0 +1,96 @@
+Aim: Write a Java program that illustrates the following
+i) Creation of simple package.
+ii) Accessing a package.
+Objectives: To understand the mechanism to encapsulate a group of classes, sub packages and
+interfaces and how to access them.
+Theory:
+A package in Java is used to group related classes. Think of it as a folder in a file
+directory. We use packages to avoid name conflicts, and to write a better maintainable code.
+Packages are divided into two categories:
+ Built-in Packages (packages from the Java API)
+ User-defined Packages (create your own packages)
+Built-in Packages:
+The Java API is a library of prewritten classes, that are free to use, included in the Java
+Development Environment.The library contains components for managing input, database
+programming, and much more. The library is divided into packages and classes. Meaning you
+can either import a single class (along with its methods and attributes), or a whole package that
+contain all the classes that belong to the specified package.
+To use a class or a package from the library, you need to use the import keyword:
+Syntax :
+import package.name.Class; // Import a single class
+import package.name.*; // Import the whole package
+Import a Class If you find a class you want to use, for example, the Scanner class, which
+is used to get user input, write the following code: Example import java.util.Scanner; In the
+example above, java.util is a package, while Scanner is a class of the java.util package.
+
+
+User-defined Packages:
+To create your own package, you need to understand that Java uses a file system
+directory to store them. Just like folders on your computer:
+Example
+└── root
+└── mypack
+└── MyPackageClass.java
+To create a package, use the package keyword:
+MyPackageClass.java
+package mypack;
+class MyPackageClass {
+public static void main(String[] args) {
+System.out.println("This is my package!");
+}
+}
+Source Code:
+i) Program on creation of simple package
+
+package MyPackage;
+public class Compare {
+int num1, num2;
+public Compare(int n, int m) {
+num1 = n;
+num2 = m;
+}
+public void getmax(){
+
+
+if ( num1 > num2 ) {
+System.out.println("Maximum value of two numbers is " + num1);
+}
+else {
+System.out.println("Maximum value of two numbers is " + num2);
+}
+}
+public static void main(String args[]) {
+Compare current[] = new Compare[3];
+current[1] = new Compare(5, 10);
+current[2] = new Compare(123, 120);
+for(int i=1; i < 3 ; i++)
+{
+current[i].getmax();
+}
+}
+}
+Output:
+Maximum value of two numbers is 10
+Maximum value of two numbers is 123
+ii) Program on accesing a package
+
+package Ncer;
+import MyPackage.Compare;
+public class Demo{
+public static void main(String args[]) {
+int n=10, m=10;
+Compare current = new Compare(n, m);
+if(n != m) {
+current.getmax();
+}
+
+
+
+else {
+System.out.println("Both the values are same");
+}
+}
+}
+Output:
+1
+Both the values are same

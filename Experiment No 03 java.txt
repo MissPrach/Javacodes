@@ -1,0 +1,133 @@
+Experiment No: 03
+
+Title : Write a program to demonstrate following Function concepts
+
+i) Function overloading
+ii) Constructors
+
+Objectives : i) To understand the concept of function calling and overloading.
+
+ii) To understand functioning of constructor.
+
+Theory:
+Function Overloading:
+Function Overloading in Java occurs when there are functions having the same name but
+have different numbers of parameters passed to it, which can be different in data like int, double,
+float and used to return different values are computed inside the respective overloaded method.
+Function overloading is used to reduce complexity and increase the efficiency of the program by
+involving more functions that are segregated and can be used to distinguish among each other
+with respect to their individual functionality. Overloaded functions are related to compile-time
+or static polymorphism. There is also a concept of type conversion, which is basically used in
+overloaded functions used to calculate the conversion of type in variables.
+Different Ways of Method Overloading in Java
+ Changing the Number of Parameters.
+ Changing Data Types of the Arguments.
+ Changing the Order of the Parameters of Methods
+
+Constructors:
+A constructor in Java is a special method that is used to initialize objects. The
+constructor is called when an object of a class is created. It can be used to set initial values for
+object attributes.
+In Java, a constructor is a block of codes similar to the method. It is called when an instance of
+the class is created. At the time of calling the constructor, memory for the object is allocated in
+the memory. It is a special type of method which is used to initialize the object. Every time an
+object is created using the new() keyword, at least one constructor is called.
+Now let us come up with the syntax for the constructor being invoked at the time of
+object or instance creation.
+
+
+
+
+class A
+{
+.......
+
+
+A() {
+}
+
+.......
+}
+
+
+A obj = new A();
+Types of Constructors in Java
+ No-argument constructor
+ Parameterized Constructor
+ Default Constructor
+
+Source Code:
+i)Program on Function Overloading
+public class Sum {
+
+
+
+
+
+
+public int sum(int x, int y)
+{
+return (x + y);
+}
+
+
+public int sum(int x, int y, int z)
+
+{
+return (x + y + z);
+}
+
+public double sum(double x, double y)
+{
+return (x + y);
+}
+
+// Driver code
+public static void main(String args[])
+{
+Sum s = new Sum();
+System.out.println(s.sum(10, 20));
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 14
+System.out.println(s.sum(10, 20, 30));
+System.out.println(s.sum(10.5, 20.5));
+}
+}
+
+Output:
+30
+60
+31.0
+
+ii) Program on constructor
+Source Code:
+class Student{
+int id;
+String name;
+
+Student4(int i,String n)
+{
+id = i;
+name = n;
+}
+
+void display()
+{
+System.out.println(id+" "+name);
+}
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 15
+public static void main(String args[]){
+
+Student s1 = new Student(111,"Karan");
+Student s2 = new Student(222,"Aryan");
+
+s1.display();
+s2.display();
+}
+}
+
+Output:
+111 Karan
+222 Aryan

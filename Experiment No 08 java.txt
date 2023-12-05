@@ -1,0 +1,47 @@
+Aim: Programs on Exception Handling.
+Objectives: To understand the mechanism of how to handle the exceptions occurred in runtime
+so that program will execute properly.
+
+Theory:
+Exceptions:
+In Java, an exception is an event that disrupts the normal flow of the program. It is an
+object which is thrown at runtime.
+Exception Handling is a mechanism to handle runtime errors such as
+ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+Exceptions can be categorized in two ways:
+1. Built-in Exceptions
+ Checked Exception
+ Unchecked Exception
+2. User-Defined Exceptions
+Let us discuss the above-defined listed exception that is as follows:
+Built-in Exceptions:
+Built-in exceptions are the exceptions that are available in Java libraries. These exceptions
+are suitable to explain certain error situations.
+ Checked Exceptions: Checked exceptions are called compile-time exceptions because
+these exceptions are checked at compile-time by the compiler.
+ Unchecked Exceptions: The unchecked exceptions are just opposite to the checked
+exceptions. The compiler will not check these exceptions at compile time. In simple words,
+if a program throws an unchecked exception, and even if we didn’t handle or declare it, the
+program would not give a compilation error.
+ Error: Error is irrecoverable. Some example of errors are OutOfMemoryError,
+VirtualMachineError, AssertionError etc.
+
+
+Source Code:
+class Main {
+public static void main(String[] args) {
+
+try {
+
+// code that generate exception
+int divideByZero = 5 / 0;
+System.out.println("Rest of code in try block");
+}
+
+catch (ArithmeticException e) {
+System.out.println("ArithmeticException => " + e.getMessage());
+}
+}
+}
+Output
+ArithmeticException => / by zero

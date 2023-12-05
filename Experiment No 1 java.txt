@@ -1,0 +1,158 @@
+Aim: Programs on Operators, Arithmetic Promotion, Method Calling.
+Objectives: 1. To write simple Java applications.
+2. To use input and output statements.
+Theory:
+Operators:
+An operator is a symbol that tells the computer to perform certain mathematical or logical
+manipulations. Operators are used in programs to manipulate data and variables. Java supports a
+rich set of operators.
+1. Arithmetic Operators
+2. Relational Operators
+3. Logical Operators
+4. Assignment Operators
+5. Increment and Decrement Operators
+6. Conditional Operators
+7. Bitwise Operators
+8. Special Operators
+1. Arithmetic Operators:- Different arithmetic operators supported by java language are listed
+below:-
+
+Symbol Used Operation Performed
++ Addition
+- Subtraction
+* Multiplication
+/ Division
+% Modulus
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 2
+2. Relational Operators:- These operators are used to compare the values of the operands that
+must
+be compitable, in order to facilitate decision-making.
+
+Symbol Used Operation Performed
+< Less than
+<= Less than or equal to
+> Greater than
+>= Greater than or equal to
+== Equal to
+!= Not Equal to
+
+3. Logical Operators:- Java has the following three logical operators.
+Symbol Used Operation Performed
+! Logical NOT
+&& Logical AND
+|| Logical OR
+
+4. Assignment Operator :- Assignment operators are used to assign the result of an expression
+to a
+variable.
+Assignment Operator:- '='
+Ex:-
+c = a+b.
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 3
+5. Increment / Decrement Operator:- Java supports two very useful operators increment (++)
+and
+decrement operator (--), these are not generally found in other languages. The increment operator
+adds
+1 from the operand, while decrement operator subtracts 1 from the operand. Both are unary ope
+rators
+and takes the following form:-
+++m (pre incrementation) or m++ (post incrementation)
+--m (pre decrementation) or m-- (post decrementation)
+
+6. Conditional Operator (?:) :- A ternary operator pair "?:" is available in the java to construct
+conditional expression of the form Exp1 ? Exp2 : Exp3. This the only operator that take 3
+operands.
+Result = Testing Expression : Exp1 : Exp2
+If Testing Expression is True perform expression 1 and assign to result. If Testing Expression is
+False perform expression 2 and assign to resut.
+
+7. Bitwise Operator:-These operator are used for testing the bits or for shifting them right or
+left.
+Bitwise operators may not be appiled to float or double.
+Symbol Used Operation Performed
+>> Shift-right
+<< Shift-left
+>>> Shift-right with zero fill
+- One's complement
+& Bitwise AND
+
+
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 4
+
+! Bitwise OR
+^ Bitwise Exclusive OR
+
+Main() Method:
+It is the starting point of every Java application. The parentheses after the identifier main
+indicate that it's a program building block called a method. Java class declarations normally
+contain one or more methods. For a Java application, one of the methods must be called main
+and must be defined as shown ; otherwise, the Java Virtual Machine (JVM) will not execute the
+application. Methods perform tasks and can return information when they complete their tasks.
+Keyword void indicates that this method will not return any information. It has to have this exact
+signature in order to be able to run our program.
+public static void main( String[] args ) The arguments we get inside the method are the
+arguments that we will get when running the program with parameters. It's an array of strings.
+Source Code:
+i) Program on operators
+class Main {
+public static void main(String[] args) {
+
+// declare variables
+int a = 12, b = 5;
+
+// addition operator
+System.out.println("a + b = " + (a + b));
+
+// subtraction operator
+System.out.println("a - b = " + (a - b));
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 5
+// multiplication operator
+System.out.println("a * b = " + (a * b));
+
+// division operator
+System.out.println("a / b = " + (a / b));
+
+// modulo operator
+System.out.println("a % b = " + (a % b));
+}
+}
+Output:
+a + b = 17
+a - b = 7
+a * b = 60
+a / b = 2
+a % b = 2
+
+ii) Program on Method calling
+import java.util.*;
+public class StaticMethodCallExample
+{
+public static void main(String args[])
+{
+int a;
+//calling static method of the Math class
+
+
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 6
+a=Math.min(23,98);
+System.out.println("Minimum number is: " + a);
+}
+}
+
+Output:
+Minimum number is: 23

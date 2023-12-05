@@ -1,0 +1,227 @@
+Aim: Programs on Control Statements.
+
+i) Java program to find whether the given no. is positive or negative.
+ii) Java Program to print weekdays according to integers from 1 to 7.
+Objectives: To review and apply the concepts involved in the usage of control statements to
+store and modify data according to the given condition.
+Theory:
+Control Structure:
+Java provides statements that can be used to control the flow of Java code. Such
+statements are called control flow statements. It is one of the fundamental features of Java,
+which provides a smooth flow of program.
+Java provides three types of control flow statements.
+1. Decision Making statements
+o if statements
+o if – else statement
+o if-else ladder statement
+o nested if statement
+o switch statement
+2. Loop statements
+o do while loop
+o while loop
+o for loop
+o for-each loop
+3. Jump statements
+o break statement
+o continue statement
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 17
+Decision-Making statements:
+As the name suggests, decision-making statements decide which statement to execute and
+when. Decision-making statements evaluate the Boolean expression and control the
+program flow depending upon the result of the condition provided.
+1) If Statement:
+In Java, the "if" statement is used to evaluate a condition. The control of the program is
+diverted depending upon the specific condition. The condition of the If statement gives a
+Boolean value, either true or false. In Java, there are four types of if-statements given
+below.
+ Simple if statement
+ if-else statement
+ if-else-if ladder
+ Nested if-statement
+ Switch Statement
+
+1. Simple if statement:
+It is the most basic statement among all control flow statements in Java. It evaluates a
+Booleanexpression and enables the program to enter a block of code if the expression
+evaluates to true.
+if(condition) {
+statement 1; //executes when condition is true
+}
+
+2. if-else statement
+The if-else statement is an extension to the if-statement, which uses another block of code, i.e.,
+else block. The else block is executed if the condition of the if-block is evaluated as false.
+Syntax:
+if(condition) {
+statement 1; //executes when condition is true
+}
+else{
+statement 2; //executes when condition is false
+}
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 18
+3) if-else-if ladder:
+The if-else-if statement contains the if-statement followed by multiple else-if statements. In other
+words, we can say that it is the chain of if-else statements that create a decision tree where the
+program may enter in the block of code where the condition is true. We can also define an else
+statement at the end of the chain.
+Syntax:
+if(condition 1) {
+statement 1; 
+}
+else if(condition 2) {
+statement 2; 
+}
+else {
+statement 2; 
+}
+4. Nested if-statement
+In nested if-statements, the if statement can contain a if or if-else statement inside another if or
+else-if statement.
+Syntax:
+if(condition 1) {
+statement 1; 
+if(condition 2) {
+statement 2; 
+}
+else{
+statement 2; 
+}
+}
+5. Switch Statement:
+In Java, Switch statements are similar to if-else-if statements. The switch statement contains
+multiple blocks of code called cases and a single case is executed based on the variable which is
+being switched. The switch statement is easier to use instead of if-else-if statements. It also
+enhances the readability of the program.
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 19
+Syntax:
+switch (expression){
+case value1: statement1; break;.
+.
+.
+case valueN: statementN; break; default:
+default statement;
+}
+Java for loop:
+In Java, for loop is similar to C and C++. It enables us to initialize the loop variable, check the
+condition, and increment/decrement in a single line of code. We use the for loop only when we
+exactly know the number of times, we want to execute the block of code.
+Syntax:
+for(initialization, condition, increment/decrement) {
+//block of statements
+}
+
+Java for-each loop:
+Java provides an enhanced for loop to traverse the data structures like array or collection. In the
+for-each loop, we don't need to update the loop variable. The syntax to use the for-each loop in
+java is given below.
+Syntax:
+for(data_type var : array_name/collection_name){
+//statements
+}
+
+Java while loop:
+The while loop is also used to iterate over the number of statements multiple times. However, if
+we don't know the number of iterations in advance, it is recommended to use a while loop.
+Unlike for loop, the initialization and increment/decrement doesn't take place inside the loop
+statement in while loop.
+The syntax of the while loop is given below.
+while(condition){
+
+
+
+
+}
+Java do-while loop:
+The do-while loop checks the condition at the end of the loop after executing the loop
+statements. When the number of iteration is not known and we have to execute the loop at least
+once, we can use do-while loop.
+It is also known as the exit-controlled loop since the condition is not checked in advance. The
+syntax of the do-while loop is given below.
+do
+{
+
+} while (condition);
+
+Java break statement:
+As the name suggests, the break statement is used to break the current flow of the program and
+transfer the control to the next statement outside a loop or switch statement. However, it breaks
+only the inner loop in the case of the nested loop.
+The break statement cannot be used independently in the Java program, i.e., it can only be
+written inside the loop or switch statement.
+Java continue statement:
+Unlike break statement, the continue statement doesn't break the loop, whereas, it skips the
+specific part of the loop and jumps to the next iteration of the loop immediately.
+Source Code:
+i) Java program to find whether the given no. is positive or negative.
+public class CheckPositiveOrNegativeExample1
+{
+public static void main(String[] args)
+{
+
+int num=912;
+
+if(num>0)
+
+
+
+
+
+{
+System.out.println("The number is positive.");
+}
+
+else if(num<0)
+{
+System.out.println("The number is negative.");
+}
+
+else
+{
+System.out.println("The number is zero.");
+}
+}
+}
+Output:
+The number is positive.
+ii) Java Program to print weekdays according to integers from 1 to 7.
+import java.util.Scanner;
+public class Main {
+
+public static void main(String[] args)
+{
+Scanner in = new Scanner(System.in);
+System.out.print("Input number: ");
+int day = in.nextInt();
+System.out.println(getDayName(day));
+}
+
+public static String getDayName(int day) {
+String dayName = "";
+switch (day) {
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 22
+case 1: dayName = "Monday"; break;
+case 2: dayName = "Tuesday"; break;
+case 3: dayName = "Wednesday"; break;
+case 4: dayName = "Thursday"; break;
+case 5: dayName = "Friday"; break;
+case 6: dayName = "Saturday"; break;
+case 7: dayName = "Sunday"; break;
+default:dayName = "Invalid day range";
+}
+return dayName;
+}
+}
+Output:
+Input number: 3
+Wednesday

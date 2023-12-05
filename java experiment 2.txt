@@ -1,0 +1,124 @@
+Aim : Programs on Classes: String and Math.
+Objectives : To understand how to use the Math methods and string methods with
+literals and variables.
+Theory:
+Java provides a number of classes and methods for use by programmers. A few of those
+items are described below:
+Math Class:
+The Math class methods are static methods that are called from the class name (e.g.
+Math.sqrt()). Each method takes at least one parameter and performs the required operations on
+it.
+ Math.sqrt(num) - returns the square root of the num
+ Math.pow(base, exp) - returns base raised to the exp power
+ Math.min(num1, num2) - returns the smallest of the two numbers
+ Math.max(num1, num2) - returns the largest of the two numbers
+ Math.round(num) - returns the rounded value of num (.5+ rounds up, under .5 rounds
+down)
+ Math.ceil(num) - returns the next highest integer - rounds up (4.2 returns 5)
+ Math.floor(num) - returns the next lowest integer - rounds down (6.8 returns 6)
+ Math.abs(num) - returns the absolute value of num (-5 returns 5)
+ Math.random() - returns a random value between 0 and 1.0
+ Math.PI - a constant used to represent 3.1415...
+String Class:
+The String class methods must be called from a string variable. In other words, String
+str="programming", must first be declared and the methods would be called from the str variable
+(str.toUpperCase()). Many string method operate on indicies, a numbered order of characters.
+The important thing to note is that strings start counting at 0. So, in str, the index of the character
+p is 0.
+ length - a property (not method) that returns the number of characters in the string
+(str.length returns 11)
+ indexOf(string) - returns the starting index of the first occurence of string in str, -1 if not
+found (str.indexOf("gram") returns 3)
+
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 8
+ lastIndexOf(string) - does the same as indexOf, but counts backwards from the end
+ charAt(num) - returns the character at the specified index (str.charAt(4) returns "r")
+ toUpperCase() - returns the string as all upper case (str.toUpperCase() returns
+PROGRAMMING)
+ toLowerCase() - returns the string as all lower case
+ substring(start, [end]) - returns a substring of the string starting at start, up to but not
+including end. If end is not specified, the remainder of the string is included
+(str.substring(3, 7) returns "gram", str.substring(7) returns "ming")
+Source Code:
+
+i) Program on Math Class
+public class JavaMathExample1
+{
+public static void main(String[] args)
+{
+double x = 28;
+double y = 4;
+
+// return the maximum of two numbers
+System.out.println("Maximum number of x and y is: " +Math.max(x, y));
+
+// return the square root of y
+System.out.println("Square root of y is: " + Math.sqrt(y));
+
+//returns 28 power of 4 i.e. 28*28*28*28
+System.out.println("Power of x and y is: " + Math.pow(x, y));
+
+// return the logarithm of given value
+
+NUTAN MAHARASHTRA VIDYA PRASARAK MANDAL’S
+
+NUTAN COLLEGE OF ENGINEERING & RESEARCH (NCER)
+DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING -ARTIFICIAL INTELLIGENCE
+---------------------------------------------------------------------------------------------------------------------
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 9
+
+System.out.println("Logarithm of x is: " + Math.log(x));
+System.out.println("Logarithm of y is: " + Math.log(y));
+
+// return the logarithm of given value when base is 10
+System.out.println("log10 of x is: " + Math.log10(x));
+System.out.println("log10 of y is: " + Math.log10(y));
+
+// return the log of x + 1
+System.out.println("log1p of x is: " +Math.log1p(x));
+
+// return a power of 2
+System.out.println("exp of a is: " +Math.exp(x));
+
+// return (a power of 2)-1
+System.out.println("expm1 of a is: " +Math.expm1(x));
+}
+}
+
+Output:
+Maximum number of x and y is: 28.0
+Square root of y is: 2.0
+Power of x and y is: 614656.0
+Logarithm of x is: 3.332204510175204
+Logarithm of y is: 1.3862943611198906
+log10 of x is: 1.4471580313422192
+log10 of y is: 0.6020599913279624
+
+
+
+
+log1p of x is: 3.367295829986474
+exp of a is: 1.446257064291475E12
+expm1 of a is: 1.446257064290475E12
+ii) Program on String class
+
+class Main {
+public static void main(String[] args) {
+// create first string
+String first = "Java ";
+System.out.println("First String: " + first);
+// create second
+String second = "Programming";
+System.out.println("Second String: " + second);
+// join two strings
+String joinedString = first.concat(second);
+System.out.println("Joined String: " + joinedString);
+}
+}
+Output:
+First String: Java
+Second String: Programming
+Joined String: Java Programming

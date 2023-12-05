@@ -1,0 +1,54 @@
+Aim: Program on Java script client side scripting.
+Objectives: To be able to design more interactive and faster web application using client side
+scripting language.
+Theory:
+Client-side scripting, like JavaScript, can be embedded into the page on the client’s
+browser. This script will allow the client’s browser to alleviate some of the burden on your web
+server when running a web application. Client-side scripting is source code that is executed on
+the client’s browser instead of the web-server, and allows for the creation of faster and more
+responsive web applications.
+Client-side scripting (embedded scripts) is code that exists inside the client’s HTML
+page. This code will be processed on the client machine and the HTML page will NOT perform a
+PostBack to the web-server. Traditionally, client-side scripting is used for page navigation, data
+validation and formatting. The language used in this scripting is JavaScript. JavaScript is
+compatible and is able to run on any internet browser.
+The two main benefits of client-side scripting are:
+1. The user’s actions will result in an immediate response because they don’t require a trip to the
+server.
+2. Fewer resources are used and needed on the web-server.
+Javascript:
+JavaScript (js) is a light-weight object-oriented programming language which is used by
+several websites for scripting the webpages. It is an interpreted, full-fledged programming
+language that enables dynamic interactivity on websites when applied to an HTML document. It
+was introduced in the year 1995 for adding programs to the webpages in the Netscape Navigator
+browser. Since then, it has been adopted by all other graphical web browsers. With JavaScript,
+users can build modern web applications to interact directly without reloading the page every
+time. The traditional website uses js to provide several forms of interactivity and simplicity.
+JavaScript is used to create interactive websites. It is mainly used for:
+ Client-side validation,
+ Dynamic drop-down menus,
+
+
+Object Oriented Programming In JAVA Lab(BTCOL306) 41
+ Displaying date and time,
+ Displaying pop-up windows and dialog boxes (like an alert dialog box, confirm
+dialog box and prompt dialog box),
+ Displaying clocks etc.
+Source Code:
+<html>
+<head>
+<script type="text/javascript">
+function msg(){
+alert("Hello");
+}
+</script>
+</head>
+<body>
+<p>Welcome to Javascript</p>
+<form>
+<input type="button" value="click" onclick="msg()"/>
+</form>
+</body>
+</html>
+Output:
+
